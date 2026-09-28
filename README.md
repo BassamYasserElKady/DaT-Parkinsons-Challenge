@@ -23,7 +23,29 @@ This public code record excludes patient scans, labels, registered volumes, trai
 6. Train ResNet-18 + CBAM, DenseNet-121, scratch Inception-v3, and an RBF-SVM.
 7. Combine leakage-controlled out-of-fold logits with logistic-regression stacking.
 
-See the [final ensemble architecture diagram](docs/final_ensemble_diagram.md).
+### Final ensemble architecture
+
+```mermaid
+flowchart LR
+    A[Raw 3-D DaT-SPECT NIfTI] --> B[ANTs rigid registration]
+    B --> C[Registered volume]
+    C --> D[Adaptive 5-slice 3-D input]
+    C --> E[Adaptive 8-slice axial MIP]
+    C --> F[82 guided morphometric and intensity features]
+    D --> G[ResNet-18 + CBAM]
+    D --> H[DenseNet-121]
+    E --> I[Scratch Inception-v3]
+    F --> J[Standardized RBF-SVM]
+    G --> K[Model probabilities]
+    H --> K
+    I --> K
+    J --> K
+    K --> L[Logit transformation]
+    L --> M[Leakage-controlled logistic stack]
+    M --> N[Final dopaminergic-deficit probability]
+```
+
+
 
 ## Main reported result
 
