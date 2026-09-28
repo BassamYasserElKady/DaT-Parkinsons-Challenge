@@ -1,0 +1,21 @@
+{
+  "scope": "sanitized aggregate development metrics",
+  "scan_count": 1362,
+  "evaluation": "stratified five-fold leakage-controlled out-of-fold evaluation where specified",
+  "contains_patient_data": false,
+  "contains_labels": false,
+  "contains_per_scan_predictions": false,
+  "results": [
+    {"name": "original_four_model_stack", "auroc": 0.9638, "log_loss": 0.2421, "accuracy": 0.8913},
+    {"name": "consistent_guided_82_feature_four_model_stack", "auroc": 0.9668593071, "log_loss": 0.2288907572, "accuracy": 0.8964757709},
+    {"name": "tuned_guided_svm_four_model_stack", "auroc": 0.9665088538, "log_loss": 0.2294767395, "accuracy": 0.9008810573},
+    {"name": "consistent_guided_svm", "auroc": 0.9534397754, "log_loss": 0.2664936002, "accuracy": 0.8759177680},
+    {"name": "tuned_guided_svm", "auroc": 0.9547055430, "log_loss": 0.2616576528, "accuracy": 0.8773861968},
+    {"name": "auxiliary_inception_v3_adaptive8_mip", "auroc": 0.962784, "log_loss": 0.255933, "accuracy": 0.889134},
+    {"name": "no_auxiliary_inception_v3_adaptive8_mip", "auroc": 0.9598545945, "log_loss": 0.2656939694, "accuracy": 0.8839941263}
+  ],
+  "notes": [
+    "Metrics are aggregate development results and should not be interpreted as external validation.",
+    "Per-scan predictions, labels, weights, scans, and caches remain excluded from the repository."
+  ]
+}
