@@ -1,5 +1,7 @@
 # DaT Parkinson's Challenge
 
+[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Status](https://img.shields.io/badge/status-research%20code-orange)](#) [![Dataset](https://img.shields.io/badge/dataset-not%20included-lightgrey)](#)
+
 Reproducible code and documentation for binary classification of dopamine-transporter (DaT) SPECT scans as normal or dopaminergic-deficit.
 
 This public code record excludes patient scans, labels, registered volumes, trained weights, predictions, caches, and submission archives.
