@@ -55,7 +55,16 @@ The final result was built through a sequence of controlled experiments rather t
 | Auxiliary Inception-v3 alone | 0.9628 | 0.2559 | 88.91% |
 | No-auxiliary Inception-v3 alone | 0.9599 | 0.2657 | 88.40% |
 
-The detailed sanitized history is in [`docs/experiment_history.md`](docs/experiment_history.md), with machine-readable aggregate values in [`reports/aggregate_metrics.json`](reports/aggregate_metrics.json). These are development-cohort OOF results, not external validation.
+## Final private leaderboard results
+
+These are the final external scores supplied for the two private evaluation sets:
+
+| Evaluation set | AUROC | Log loss | Rank |
+|---|---:|---:|---:|
+| First private set | 0.9622 | 0.2414 | 20th |
+| Second private set | 0.9421 | 0.2972 | 35th |
+
+The detailed sanitized history is in [`docs/experiment_history.md`](docs/experiment_history.md). Aggregate development values are in [`reports/aggregate_metrics.json`](reports/aggregate_metrics.json), and the private leaderboard values are in [`reports/competition_scores.json`](reports/competition_scores.json). Internal OOF scores are not external leaderboard scores.
 
 ## Reproducibility rule
 
