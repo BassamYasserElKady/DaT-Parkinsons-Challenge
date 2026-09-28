@@ -74,7 +74,7 @@ The following list is reproduced from the referenced third-place solution's proj
 | this repo | 7th, 0.2313 | 6th, 0.2732 | +1 |
 | venkt | 10th, 0.2340 | 38th, 0.2971 | −28 |
 | Tigertech | 12th, 0.2363 | 2nd, 0.2647 | +10 |
-| **Djehuty** | **20th, 0.2414** | **35th, 0.2972** | **—** |
+| **Djehuty** | **20th, 0.2414** | **35th, 0.2972** | **−15** |
 
 The detailed sanitized history is in [`docs/experiment_history.md`](docs/experiment_history.md). Aggregate development values are in [`reports/aggregate_metrics.json`](reports/aggregate_metrics.json), and the private leaderboard values are in [`reports/competition_scores.json`](reports/competition_scores.json). Internal OOF scores are not external leaderboard scores.
 
