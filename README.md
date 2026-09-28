@@ -1,5 +1,7 @@
 # DaT Parkinson's Challenge
 
+## Multi-Modal Ensemble for DaT-SPECT Classification
+
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Status](https://img.shields.io/badge/status-research%20code-orange)](#) [![Dataset](https://img.shields.io/badge/dataset-not%20included-lightgrey)](#)
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.11.0%2Bcu130-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/) [![torchvision](https://img.shields.io/badge/torchvision-0.26.0%2Bcu130-EE4C2C)](https://pytorch.org/vision/) [![NumPy](https://img.shields.io/badge/NumPy-2.3.5-013243?logo=numpy&logoColor=white)](https://numpy.org/) [![SciPy](https://img.shields.io/badge/SciPy-1.15.3-8CAAE6?logo=scipy&logoColor=white)](https://scipy.org/) [![pandas](https://img.shields.io/badge/pandas-2.3.3-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
