@@ -26,6 +26,37 @@ The strongest internally validated consistent pipeline was the four-model stack:
 
 This is a five-fold out-of-fold result on 1,362 scans, not an external-dataset estimate.
 
+## How the final model was reached
+
+The final result was built through a sequence of controlled experiments rather than a single training run:
+
+| Stage | What was tested | Outcome |
+|---|---|---|
+| Registration baseline | ANTs rigid registration into a DAT/MNI template | Established a common physical space |
+| CNN baseline | ResNet-18 and DenseNet-121 on registered 3-D volumes | Provided strong image-only predictors |
+| Slice selection | Fixed versus adaptive axial windows | Adaptive windows handled variable scan coverage better |
+| Projection comparison | MIP versus non-MIP representations | Adaptive 8-slice axial MIP was retained for Inception-v3 |
+| Inception ablation | Auxiliary versus no auxiliary classifier | Auxiliary Inception performed better in the matched OOF comparison |
+| Morphometric SVM | Shape, intensity, SBR, asymmetry, and regional features | Added complementary information to the CNNs |
+| Guided SVM expansion | 82 consistent features with full shapes, quarters, and sliding local-intensity summaries | Improved the internally consistent ensemble |
+| SVM tuning | RBF `C`, `gamma`, and class-weight search inside nested folds | Slightly improved standalone SVM performance |
+| Ensemble comparison | Equal averaging, manual weights, calibration, routing, and logit stacking | Leakage-controlled logistic logit stacking was retained |
+| Runtime validation | Raw NIfTI through registration, four branches, SVM extraction, and submission CSV | Confirmed the inference path end to end |
+
+### Aggregate development results
+
+| Model or ensemble | AUROC | Log loss | Accuracy |
+|---|---:|---:|---:|
+| Original four-model stack | 0.9638 | 0.2421 | 89.13% |
+| Consistent guided 82-feature stack | **0.9669** | **0.2289** | 89.65% |
+| Tuned guided-SVM stack | 0.9665 | 0.2295 | **90.09%** |
+| Guided SVM alone | 0.9534 | 0.2665 | 87.59% |
+| Tuned guided SVM alone | 0.9547 | 0.2617 | 87.74% |
+| Auxiliary Inception-v3 alone | 0.9628 | 0.2559 | 88.91% |
+| No-auxiliary Inception-v3 alone | 0.9599 | 0.2657 | 88.40% |
+
+The detailed sanitized history is in [`docs/experiment_history.md`](docs/experiment_history.md), with machine-readable aggregate values in [`reports/aggregate_metrics.json`](reports/aggregate_metrics.json). These are development-cohort OOF results, not external validation.
+
 ## Reproducibility rule
 
 Preprocessing, feature selection, SVM fitting, calibration, and ensemble-weight fitting must be performed inside each training fold. The validation fold remains untouched until inference.
@@ -37,6 +68,7 @@ scripts/       Registration, preprocessing, model, feature, CV, and packaging sc
 src/           Reusable project modules
 configs/       Parameter configuration files
 docs/          Design notes, audits, and experiment documentation
+reports/       Sanitized aggregate metrics only
 assets/        Small atlas metadata files only
 requirements.txt
 ```
