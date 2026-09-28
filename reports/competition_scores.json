@@ -1,0 +1,20 @@
+{
+  "source": "user-supplied final leaderboard results",
+  "results": [
+    {
+      "evaluation_set": "first_private_set",
+      "auroc": 0.9622,
+      "log_loss": 0.2414,
+      "rank": 20
+    },
+    {
+      "evaluation_set": "second_private_set",
+      "auroc": 0.9421,
+      "log_loss": 0.2972,
+      "rank": 35
+    }
+  ],
+  "contains_scans": false,
+  "contains_labels": false,
+  "contains_scan_level_predictions": false
+}
