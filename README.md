@@ -71,7 +71,7 @@ The following list is reproduced from the referenced third-place solution's proj
 | Marc-Dvci | 1st, 0.2154 | 28th, 0.2931 | −27 |
 | TheAvengers | 2nd, 0.2249 | 1st, 0.2532 | +1 |
 | South-Wing | 3rd, 0.2263 | 17th, 0.2848 | −14 |
-| this repo | 7th, 0.2313 | 6th, 0.2732 | +1 |
+| paulonium | 7th, 0.2313 | 6th, 0.2732 | +1 |
 | venkt | 10th, 0.2340 | 38th, 0.2971 | −28 |
 | Tigertech | 12th, 0.2363 | 2nd, 0.2647 | +10 |
 | **Djehuty** | **20th, 0.2414** | **35th, 0.2972** | **−15** |
