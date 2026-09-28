@@ -23,6 +23,8 @@ This public code record excludes patient scans, labels, registered volumes, trai
 6. Train ResNet-18 + CBAM, DenseNet-121, scratch Inception-v3, and an RBF-SVM.
 7. Combine leakage-controlled out-of-fold logits with logistic-regression stacking.
 
+See the [final ensemble architecture diagram](docs/final_ensemble_diagram.md).
+
 ## Main reported result
 
 The strongest internally validated consistent pipeline was the four-model stack:
