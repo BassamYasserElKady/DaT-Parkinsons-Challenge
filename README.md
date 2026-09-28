@@ -17,7 +17,7 @@ The goal of this challenge is to develop machine-learning models that estimate t
 
 ![Examples of normal and abnormal DaT-SPECT scans](https://drivendata-prod-public.s3.amazonaws.com/comp_images/sfmn-scans-cropped.png)
 
-*Illustration from the official [DaT Parkinson.s Challenge description](https://www.drivendata.org/competitions/311/dat-parkinsons-challenge/page/987/).*
+*Illustration from the official [DaT Parkinson's Challenge description](https://www.drivendata.org/competitions/311/dat-parkinsons-challenge/page/987/).*
 
 ## Pipeline
 
