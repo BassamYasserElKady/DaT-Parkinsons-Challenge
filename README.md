@@ -26,7 +26,7 @@ This public code record excludes patient scans, labels, registered volumes, trai
 ### Final ensemble architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Raw 3-D DaT-SPECT NIfTI] --> B[ANTs rigid registration]
     B --> C[Registered volume]
     C --> D[Adaptive 5-slice 3-D input]
