@@ -1,6 +1,4 @@
-# DaT Parkinson's Challenge
-
-## Multi-Modal Ensemble for DaT-SPECT Classification
+# DaT Parkinson's Challenge: Multi-Modal Ensemble for DaT-SPECT Classification
 
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Status](https://img.shields.io/badge/status-research%20code-orange)](#) [![Dataset](https://img.shields.io/badge/dataset-not%20included-lightgrey)](#)
 
