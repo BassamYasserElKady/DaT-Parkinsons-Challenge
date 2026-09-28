@@ -11,6 +11,14 @@ Reproducible code and documentation for binary classification of dopamine-transp
 This public code record excludes patient scans, labels, registered volumes, trained weights, predictions, caches, and submission archives.
 
 
+## Challenge objective
+
+The goal of this challenge is to develop machine-learning models that estimate the probability that a dopamine-transporter (DaT) SPECT examination is **abnormal** rather than **normal**. The task uses a large multicenter dataset collected and annotated by French experts. A successful solution should generalize across hospitals, scanners, acquisition protocols, and patient populations, supporting more consistent, accessible, and scalable DaT-scan interpretation.
+
+![Examples of normal and abnormal DaT-SPECT scans](https://drivendata-prod-public.s3.amazonaws.com/comp_images/sfmn-scans-cropped.png)
+
+*Illustration from the official [DaT Parkinson.s Challenge description](https://www.drivendata.org/competitions/311/dat-parkinsons-challenge/page/987/).*
+
 ## Pipeline
 
 1. Read raw 3-D NIfTI DaT-SPECT volumes.
