@@ -13,27 +13,6 @@ Reproducible code and documentation for binary classification of dopamine-transp
 This public code record excludes patient scans, labels, registered volumes, trained weights, predictions, caches, and submission archives.
 
 
-## Environment
-
-The development environment used for the reported experiments included:
-
-| Package | Version |
-|---|---|
-| Python | 3.13 |
-| PyTorch | 2.11.0+cu130 |
-| torchvision | 0.26.0+cu130 |
-| NumPy | 2.3.5 |
-| SciPy | 1.15.3 |
-| pandas | 2.3.3 |
-| scikit-learn | 1.8.0 |
-| NiBabel | 5.4.2 |
-| ANTsPyX | 0.6.3 |
-| matplotlib | 3.11.1 |
-| PyYAML | 6.0+ |
-| pytest | 9.1.1 |
-
-The exact minimum dependency ranges are listed in [`requirements.txt`](requirements.txt). CUDA availability and GPU driver versions can change independently of the Python package versions.
-
 ## Pipeline
 
 1. Read raw 3-D NIfTI DaT-SPECT volumes.
